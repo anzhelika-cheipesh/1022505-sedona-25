@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Angelika Cheipesh](https://up.htmlacademy.ru/htmlcss/25/user/1022505).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Соколинский](https://htmlacademy.ru/profile/denisksks).
 
 ---
 
