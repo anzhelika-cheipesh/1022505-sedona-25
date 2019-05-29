@@ -25,12 +25,12 @@
       <section class="advantages">
         <h2>Седона - небольшой  городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
-          <ul class="advantages-list">
+          <ol class="advantages-list">
             <li class="advantages-item">
               <h3>Настоящий городок</h3>
               <p>№1<p>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              <img src="img/real-city.jpg" width="800" height="256" alt="Фото города">
+              <img src="img/real-city.jpg" width="800" height="256" alt="Фото города Седона">
             </li>
             <li class="advantages-item">
               <h3>Там есть Мост дьявола</h3>
@@ -53,23 +53,24 @@
               <p>№5</p>
               <p>Большинство едет в гранд каньон и толпится там</p>
             </li>
-          </ul>
+          </ol>
       </section>
 
       <section class="suggestions">
+        <h2 class="visually-hidden">Дополнительные предложения</h2>
         <ul class="suggestions-list">
           <li class="suggestions-item">
-            <img src="img/house-icon.svg" width="75" height="72" >
+            <img src="img/house-icon.svg" width="75" height="72" alt="">
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="suggestions-item">
-            <img src="img/food-icon.svg" width="74" height="70">
+            <img src="img/food-icon.svg" width="74" height="70" alt="">
             <h3>Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="suggestions-item">
-            <img src="img/gift-icon.svg" width="64" height="76">
+            <img src="img/gift-icon.svg" width="64" height="76" alt="">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
           </li>
@@ -79,7 +80,7 @@
       <section class="next-steps">
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложение гостиниц в Седоне</p>
-       <img src="img/map.png" width="1200" height="594" alt="Карта">
+       <img src="img/map.png" width="1200" height="594" alt="Карта местросположения городка Седона в США штате Аризона">
       </section>
     </main>
 
@@ -94,14 +95,37 @@
       </div>
       <div class="footer-copyright">
         <p>Website by:</p>
-        <a href="https://htmlacademy.ru/" class="button"><img src="img/html-logo.svg" width="115" height="41"></a>
+        <a href="https://htmlacademy.ru/" class="button"><img src="img/html-logo.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
       </div>
     </footer>
 
     <section class="modal-search">
       <h2>Поиск гостиницы в Седоне</h2>
-      <!--Здесь будет форма-->
-      <a class="button" href="hotels-search.sedona">Найти</a>
+      <form class="hotel-search-sedona" action="sedona/index.form" method="get">
+        <p class="modal-search-item">
+          <label>
+            Дата заезда:
+            <input type="text" name="date-entry">
+          </label>
+        </p>
+        <p class="modal-search-item">
+          <label>
+            Дата выезда:
+            <input type="text" name="date-depart">
+          </label>
+        </p>
+        <p class="modal-search-item">
+          <label>
+            Взрослые:
+            <input type="text" name="adults">
+          </label>
+          <label>
+            Дети:
+            <input type="text" name="childrens">
+          </label>
+        </p>
+        <a class="button" href="hotels-search.sedona">Найти</a>
+      </form>
       </section>
 
   </body>
