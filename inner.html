@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+
+  <body class="inner-page">
+
     <header class="inner-header">
       <nav class="main-navigation">
         <a href="file:///C:/Users/Anzselika/Documents/GitHub/1022505-sedona-25/index.html"><img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта Седона"></a>
@@ -27,6 +32,7 @@
                 <li class="filter-option">
                   <label>
                   <input class="filter-input" type="checkbox" name="pool" checked>Бассейн</label>
+                  <span class="checked"></span>
                 </li>
                 <li class="filter-option">
                   <label>
@@ -68,13 +74,13 @@
           <div class="sort-by">
             <p>Сортировка:</p>
             <ul class="sort-by-list">
-              <li class="sort-by-item"><a href="results-by-price">По цене</a></li>
-              <li class="sort-by-item"><a href="results-by-type">По типу</a></li>
-              <li class="sort-by-item"><a href="results-by-rating">По рейтингу</a></li>
+              <li class="sort-by-item"><button type="submit" class="button">По цене</button></li>
+              <li class="sort-by-item"><button type="submit" class="button">По типу</button></li>
+              <li class="sort-by-item"><button type="submit" class="button">По рейтингу</button></li>
             </ul>
             <ul class="sort-icons">
-              <li class="sort-icons-item"><a href="sort-by-low-high" class="visually-hidden">Сортировка от наименьшего к наибольшему</a></li>
-              <li class="sort-icons-item"><a href="sort-by-high-low" class="visually-hidden">Сортировка от наибольшего к наименьшему</a></li>
+              <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наименьшего к наибольшему</button></li>
+              <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наибольшего к наименьшему</button></li>
             </ul>
           </div>
           <div class="sorted-results">
@@ -82,31 +88,31 @@
             <ul class="sorted-results-list">
               <li class="sorted-results-item">
                 <img src="img/amara-resort.jpg" alt="Фото гостиницы Amara resort and spa">
-                <h3>Amara resort and spa</h3>
-                <p>Гостиница от 4000р.</p>
+                <h3><a href="amara.resort">Amara resort and spa</a></h3>
+                <p>Гостиница <span>от 4000р.</span></p>
                 <ul class="options">
                   <li class="option-item"><a href="more.about">Подробнее</a></li>
-                  <li class="option-item"><a href="reserve">Забронировать</a></li>
+                  <li class="option-item"><button type="button" class="button">Забронировать</button></li>
                 </ul>
                 <p class="rating">Рейтинг: 8,5</p>
               </li>
               <li class="sorted-results-item">
                 <img src="img/desert-quail.jpg" alt="Фото мотеля Desert Quail Inn">
-                <h3>Desert Quail Inn</h3>
-                <p>Мотель от 3000р.</p>
+                <h3><a href="desert.motel">Desert Quail Inn</a></h3>
+                <p>Мотель <span>от 3000р.</span></p>
                 <ul class="options">
                   <li class="option-item"><a href="more.about">Подробнее</a></li>
-                  <li class="option-item"><a href="reserve">Забронировать</a></li>
+                  <li class="option-item"><button type="button" class="button">Забронировать</button></li>
                 </ul>
                 <p class="rating">Рейтинг: 8,9</p>
               </li>
               <li class="sorted-results-item">
                 <img src="img/villas-el-poco.jpg" alt="Фото апартамента Villas at Poco Diablo">
-                <h3>Villas at Poco Diablo</h3>
-                <p>Апартаменты от 2000р.</p>
+                <h3><a href="villas.apartment">Villas at Poco Diablo</a></h3>
+                <p>Апартаменты <span>от 2000р.</span></p>
                 <ul class="options">
                   <li class="option-item"><a href="more.about">Подробнее</a></li>
-                  <li class="option-item"><a href="reserve1">Забронировать</a></li>
+                  <li class="option-item"><button type="button" class="button">Забронировать</button></li>
                 </ul>
                 <p class="rating">Рейтинг: 9,2</p>
               </li>
@@ -115,17 +121,21 @@
       </section>
     </main>
 
-    <footer class="inner-footer">
+    <footer class="main-footer">
       <p class="hashtag">#visitsedona</p>
       <div class="footer-social">
         <ul>
-          <li><a href="twitter.sedona" class="social-button"><img src="img/tw-icon.svg" width="46" height="48" alt="Twitter"></a></li>
-          <li><a href="facebook.sedona" class="social-button"><img src="img/fb-icon.svg" width="46" height="48" alt="Facebook"></a></li>
-          <li><a href="youtube.sedona" class="social-button"><img src="img/youtube-icon.svg" width="46" height="48" alt="Youtube"></a></li>
-        </ul>
+           <li><a href="twitter.sedona" class="social-button twitter">Twitter</a></li>
+           <li><a href="facebook.sedona" class="social-button facebook">Facebook</a></li>
+           <li><a href="youtube.sedona" class="social-button youtube">Youtube</a></li>
+       </ul>
       </div>
       <div class="footer-copyright">
-        <p>Website by:</p>
-        <a href="https://htmlacademy.ru/" class="button"><img src="img/html-logo.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
+         Website by:
+      <a href="https://htmlacademy.ru/" class="button">HTML Academy</a>
       </div>
     </footer>
+
+  </body>
+
+</html>
