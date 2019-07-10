@@ -161,7 +161,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-    background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .advantages-list .blue {
@@ -175,7 +175,10 @@ a {
   display: flex;
   color: #ffffff;
   margin: 0;
-  order: -1;
+  order: 2;
+}
+.advantages-list .last {
+  order: 1;
 }
 
 .advantages-item-container {
@@ -207,13 +210,14 @@ a {
   padding: 0;
   margin-bottom: 7px;
   padding-top: 26px;
+  order: 3;
 }
 
 .grey h3 {
   width: 120px;
 }
 
-.suggestions-list {
+.advantages-item .suggestions-list {
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
@@ -222,8 +226,9 @@ a {
   padding-top: 10px;
   align-items: center;
   list-style: none;
-  order: -1;
+  order: 1;
   background-color: #ffffff;
+  width: 1200px;
 }
 
 .suggestions-item {
