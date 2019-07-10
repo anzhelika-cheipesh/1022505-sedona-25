@@ -5,19 +5,21 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="inner-page">
 
-    <header class="inner-header">
+    <header class="main-header">
       <nav class="main-navigation">
-        <a href="file:///C:/Users/Anzselika/Documents/GitHub/1022505-sedona-25/index.html"><img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта Седона"></a>
+        <div class="logo-sedona">
+         <a href="file:///C:/Users/Anzselika/Documents/GitHub/1022505-sedona-25/index.html"><img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта Седона"></a>
+        </div>
         <ul class="site-navigation">
-          <li><a href="main-information.sedona">Информация</a></li>
-          <li><a href="gallery.sedona">Фото и видео</a></li>
-          <li><a href="maps.sedona">Карта Штата</a></li>
-          <li><a href="hotels-information.sedona">Гостиницы</a></li>
+          <li class="left-column"><a href="main-information.sedona">Информация</a></li>
+          <li class="left-column photos"><a href="gallery.sedona">Фото и видео</a></li>
+          <li class="right-column state-map"><a href="maps.sedona">Карта Штата</a></li>
+          <li class="right-column"><a href="file:///C:/Users/Anzselika/Documents/GitHub/1022505-sedona-25/inner.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -25,63 +27,97 @@
     <main class="inner-content">
       <section class="filters">
         <h1 class="visually-hidden">Опции выбора</h1>
-        <form class="filter" method="get" action="sedona/inner.form">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
-              <ul>
-                <li class="filter-option">
-                  <label>
-                  <input class="filter-input" type="checkbox" name="pool" checked>Бассейн</label>
-                  <span class="checked"></span>
-                </li>
-                <li class="filter-option">
-                  <label>
-                  <input class="filter-input" type="checkbox" name="parikng">Парковка</label>
-                </li>
-                <li class="filter-option">
-                  <label>
-                  <input class="filter-input" type="checkbox" name="wi-fi">Wi-Fi</label>
-                </li>
-              </ul>
-           </fieldset>
-           <fieldset>
-             <legend>Тип жилья:</legend>
-               <ul>
-                 <li class="filter-option">
-                   <label>
-                   <input class="filter-input" type="checkbox" name="hotel" checked>Гостиница</label>
-                 </li>
-                 <li class="filter-option">
-                   <label>
-                   <input class="filter-input" type="checkbox" name="moter" checked>Мотель</label>
-                 </li>
-                 <li class="filter-option">
-                   <label>
-                   <input class="filter-input" type="checkbox" name="apartment" checked>Апартаменты</label>
-                 </li>
-             </ul>
-           </fieldset>
-           <label>Стоимость в сутки:
-             От 0<input type="range" name="cost-per-day" min="0" max="3000">До 3000
-           </label>
-           <button type="submit" class="filter-button">Показать</button>
-        </form>
+        <div class="filters-easy">
+          <div class="filter-container">
+            <form class="filter" method="get" action="sedona/inner.form">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                  <ul class="filter-list">
+                    <li class="filter-item">
+                      <label class="filter-option">
+                        <input type="checkbox" name="pool" checked class="visually-hidden">
+                        <span class="filter-checkbox"></span>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label class="filter-option">
+                      <input type="checkbox" name="parikng" class="visually-hidden">
+                      <span class="filter-checkbox"></span>
+                      Парковка
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label class="filter-option">
+                      <input type="checkbox" name="wi-fi" class="visually-hidden">
+                      <span class="filter-checkbox"></span>
+                      Wi-Fi
+                      </label>
+                    </li>
+                  </ul>
+               </fieldset>
+             </form>
+             </div>
+             <div class="filter-container">
+               <fieldset class="filter">
+                 <legend>Тип жилья:</legend>
+                   <ul class="filter-list">
+                     <li class="filter-item">
+                       <label class="filter-option">
+                       <input class="visually-hidden" type="checkbox" name="hotel" checked>
+                       <span class="filter-checkbox"></span>
+                       Гостиница
+                       </label>
+                     </li>
+                     <li class="filter-item">
+                       <label class="filter-option">
+                       <input class="visually-hidden" type="checkbox" name="moter" checked>
+                       <span class="filter-checkbox"></span>
+                       Мотель
+                       </label>
+                     </li>
+                     <li class="filter-item">
+                       <label class="filter-option">
+                       <input class="visually-hidden" type="checkbox" name="apartment" checked>
+                       <span class="filter-checkbox"></span>
+                       Апартаменты
+                       </label>
+                     </li>
+                 </ul>
+               </fieldset>
+             </div>
+           </div>
+           <div class="filter-range">
+             <div class="filter-range-title">Стоимость в сутки (р):</div>
+             <div class="price-controls">
+               <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+               <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+             </div>
+             <div class="range-controls">
+               <div class="scale">
+                 <div class="bar"></div>
+               </div>
+               <div class="range-toggle range-toggle-min"></div>
+               <div class="range-toggle range-toggle-max"></div>
+             </div>
+             <button class="btn-transparent" type="submit">Показать</button>
+           </div>
       </section>
 
       <section class="results">
-        <h2 class="visually-hidden">Результаты</h2>
-        <b>Найдено: 3</b>
-          <div class="sort-by">
-            <p>Сортировка:</p>
-            <ul class="sort-by-list">
-              <li class="sort-by-item"><button type="submit" class="button">По цене</button></li>
-              <li class="sort-by-item"><button type="submit" class="button">По типу</button></li>
-              <li class="sort-by-item"><button type="submit" class="button">По рейтингу</button></li>
-            </ul>
-            <ul class="sort-icons">
-              <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наименьшего к наибольшему</button></li>
-              <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наибольшего к наименьшему</button></li>
-            </ul>
+        <div class="results-sorts">
+          <h2 class="visually-hidden">Результаты</h2>
+          <b>Найдено: 3</b>
+          <p>Сортировка:</p>
+          <ul class="sort-by-list">
+            <li class="sort-by-item"><button type="submit" class="button">По цене</button></li>
+            <li class="sort-by-item"><button type="submit" class="button">По типу</button></li>
+            <li class="sort-by-item"><button type="submit" class="button">По рейтингу</button></li>
+          </ul>
+          <ul class="sort-icons">
+            <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наименьшего к наибольшему</button></li>
+            <li class="sort-icons-item"><button type="submit" class="visually-hidden button">Сортировка от наибольшего к наименьшему</button></li>
+          </ul>
           </div>
           <div class="sorted-results">
             <h2 class="visually-hidden">Отсортированные результаты</h2>
@@ -123,16 +159,17 @@
 
     <footer class="main-footer">
       <p class="hashtag">#visitsedona</p>
-      <div class="footer-social">
-        <ul>
-           <li><a href="twitter.sedona" class="social-button twitter">Twitter</a></li>
-           <li><a href="facebook.sedona" class="social-button facebook">Facebook</a></li>
-           <li><a href="youtube.sedona" class="social-button youtube">Youtube</a></li>
-       </ul>
-      </div>
+        <ul class="footer-social">
+          <li><a href="twitter.sedona" class="social-button twitter"><span class="visually-hidden">Twitter></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><g><g><image width="17" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAABUElEQVQ4T53TsasNYBjH8c9PCndhYJFSdyEZpehM4h9QusnGXUSJxUb5CwySwXYXWQzKIKtMkhKTwaJMJEn34tFzOlen0zn3XJ7tfd7f833e5/e+b6pqG1aTlBlRVXvxEMewhge4jB04kKq6hjMYJPk1yamq/Xg3Khjf/oKduNCQpi7hbXdK8nVcWVVPcWrGIX/jWUPu4NJI9APXcTfJz85VVed65GnRpxk0ZBHvJxSreINXOI/MgFxMcq8hV9G+7Jtl7Ab500keNeQ2rvwHoEuOJHnZkD34MMX9edz2bCHJ2nDWqur7f4Jd8yrH9p8nGfR6HXIUL7DlHyBDU8chDevbOLRJyCcsJvn+FzIaaTduYHkT/iwl6W8wjDb2ZFNxGGfRsI3iVpKb44KG3Mc5bJ9T/LmfQpKVSd26sSdG/+c4DmLrSPgRr/EYK0m+TWv0Bze6bYV8NycKAAAAAElFTkSuQmCC"/></g></g></svg>
+        </a></li>
+          <li><a href="facebook.sedona" class="social-button facebook"><span class="visually-hidden">Facebook></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="22" viewBox="0 0 12 22"><g><g><image width="12" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAAdklEQVQ4T9WSuw2AQAxDXwoKOtiAEViBht0YiQVYB2gpMDoEEopCyyel5edYdzGCkVQDHdAA2dVi3n+YByCPwiKgB9rInLQIWHyN20qSUsDq0itgPrVogxxQmtn0ICDJV7h7oF23bwKFKz3+7R+C8377NL5XaQOTZmYRxd1X6AAAAABJRU5ErkJggg=="/></g></g></svg>
+          </a></li>
+          <li><a href="youtube.sedona" class="social-button youtube"><span class="visually-hidden">Youtube></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><g><g><image width="20" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAAsUlEQVQ4T7XUMU5CQRAA0LfESEjs7OisSKjoOAM0hNYbkHgICzs5DFRcgxIauAgyZE00BOMHPsvUu29nZ2cnRUQbC3TxoF7ssMQoRcQGL/WcP7u2GfxCoxC4z2AUwr6ZKvAdA/SvObAKHKeUZhHRwRTDS0pzFvzJLiKe8YlXNP/L+mLwCH7EByZ4OoVvAd/Qqg0Wu3LJRyneNte03+/au3y9FXLzloh1zjCPrzl6JcbXAfwiZ7tRzeOFAAAAAElFTkSuQmCC"/></g></g></svg>
+          </a></li>
+        </ul>
       <div class="footer-copyright">
-         Website by:
-      <a href="https://htmlacademy.ru/" class="button">HTML Academy</a>
+        <p>Website by:</p>
+        <a href="https://htmlacademy.ru/" class="button"><span class="visually-hidden">HTML Academy</span></a>
       </div>
     </footer>
 
